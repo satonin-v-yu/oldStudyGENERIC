@@ -1,0 +1,35 @@
+Program dependency artifacts such as call graph supports a
+number of key software engineering tasks including software
+mining, program understanding, debugging, feature location,
+maintenance and evolution. Static code analysis can be quite
+challenging when dealing with single-language monolithic
+applications–depending on the language (e.g. typed or not)
+and the task at hand (e.g. understanding versus data flow
+analysis). Things get far more complicated when dealing with
+multi-language systems such as JEE applications. Further,
+JEE applications rely on JEE container services that, in the
+process of hiding/abstracting the complexities of the run-time
+infrastructure, end up hiding some useful dependencies. These
+dependencies need to be identified, in order to improve the
+accuracy of the other software engineering tasks. In this paper,
+we highlighted the major difficulties in analyzing dependencies
+across key JEE technologies (Servlet, JSP, JSF, and EJBs), and
+presented our strategies for addressing them.
+To implement our solution, we developed a tool called
+DeJEE (Dependencies in JEE) as an Eclipse plug-in. We
+reused the KDM APIs offered by MoDisco. We applied
+DeJEE on two open-source JEE applications. The results show
+that DeJEE is able to detect different type of dependencies
+that MoDicso does not. Also, DeJEE detects dependencies
+toward program elements that do not exist in the application
+implementation.
+
+B. Future Work
+We are extending our work in four research directions.
+These are:
+1) Generalization from JEE applications to multi-language
+applications: The problems encountered with JEE applications are common to modern legacies which also tend to be
+multi-language, and also rely on various frameworks, middlewares, and container services, which relieve application developers from the complexities of the run-time environment, but
+also obfuscate dependencies that would otherwise help explain
+functional dependencies and run-time behavior. The principles
+underlying our solutions should apply to other recent legacies.
